@@ -11,13 +11,15 @@ import path from 'node:path';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-export const siteUrl = "https://assucly.fr";
+export const siteUrlASS = "https://assucly.fr";
+export const siteUrl = "https://aliou-ka.github.io";
 
 const date = new Date().toISOString();
 // https://astro.build/config
 export default defineConfig({
     site: siteUrl + "/",
-
+    base: "app",
+    trailingSlash: "always",
     integrations: [
         react(),
         svgr(),
