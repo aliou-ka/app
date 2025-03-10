@@ -33,11 +33,10 @@ jobs:
           node-version: 20
           cache: 'pnpm'
 
-
-      - name: Install dependencies
+      - name: Clean and Install dependencies
         run: |
           rm -rf node_modules dist .astro pnpm-lock.yaml
-          pnpm install
+          pnpm install --no-frozen-lockfile
 
       - name: Build Astro app
         run: pnpm run build
