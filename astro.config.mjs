@@ -20,6 +20,7 @@ export default defineConfig({
     site: siteUrl + "/",
     base: "app",
     trailingSlash: "always",
+    output: 'static',
     integrations: [
         react(),
         svgr(),
