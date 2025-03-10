@@ -7,6 +7,7 @@ import { Stats } from "@blocks/Stats";
 import { Newsletter } from "@blocks/Newsletter";
 import { Testimonials } from "@blocks/Testimonials";
 import { ImageContent } from "@blocks/ImageContent";
+import ForceClient from "@components/ForceClient";
 ---
 
 <Layout title="Assucly" description="YOUR META DESCRIPTION FOR SEO">
@@ -165,4 +166,6 @@ import { ImageContent } from "@blocks/ImageContent";
             />
         </div>
     </main>
+    <!-- <DummyClient client:load /> -->
+    <ForceClient client:only="react" />
 </Layout>

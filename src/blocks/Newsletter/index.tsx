@@ -45,7 +45,7 @@ export const Newsletter: FC<NewsletterProps> = ({
                                     autoComplete="email"
                                     required
                                     className="min-w-0 flex-auto rounded-md border-0 bg-primary/5 px-3.5 py-2 text-primary shadow-sm ring-1 ring-inset ring-primary/10 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-p-md sm:leading-6"
-                                    placeholder="Enter your email"
+                                    placeholder="Entrez votre mail"
                                 />
                                 <Button
                                     asButton

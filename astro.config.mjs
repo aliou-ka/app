@@ -6,24 +6,35 @@ import svgr from "vite-plugin-svgr";
 import tailwind from "@astrojs/tailwind";
 import { fileURLToPath } from 'node:url';
 import { dirname } from 'node:path';
+import mdx from "@astrojs/mdx";
+import * as acorn from "acorn";
+//import robotsTxt from 'astro-robots-txt';
+//import { Parser } from "acorn";
 import path from 'node:path';
-
+import node from '@astrojs/node';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 export const siteUrlASS = "https://assucly.fr";
-export const siteUrl = "https://aliou-ka.github.io";
+export const siteUrl = "https://localhost:4321";
 
 const date = new Date().toISOString();
 // https://astro.build/config
 export default defineConfig({
     site: siteUrl + "/",
-    base: "app",
-    trailingSlash: "always",
+    base: "",
+    //trailingSlash: "always",
+    output: 'server',
+    adapter: node({
+        mode: 'standalone',
+    }), // ou mode: 'middleware' si tu veux l'intégrer à Express ou autre
+ 
     integrations: [
         react(),
+        mdx(),
+       // robotsTxt(),
         svgr(),
-        sitemap({
+        sitemap({          
             serialize(item) {
                 // Default values for pages
                 item.priority = siteUrl + "/" === item.url ? 1.0 : 0.9;
@@ -53,10 +64,10 @@ export default defineConfig({
             configFile: "./tailwind.config.js",
         }),
     ],
-    renderers: ["@astrojs/renderer-react"],
-    prerender: true,
+  
+    renderers: ["@astrojs/renderer-react"],   
     vite: {
-        plugins: [CompressionPlugin(), svgr()],
+        plugins: [CompressionPlugin(), svgr()],          
         define: {
             '__dirname': JSON.stringify(__dirname),
             '__filename': JSON.stringify(__filename),
@@ -64,6 +75,7 @@ export default defineConfig({
         resolve: {
             alias: {
                 fsevents: false,
+                acorn: path.resolve('./node_modules/acorn')
             },
         },
         optimizeDeps: {
@@ -71,17 +83,22 @@ export default defineConfig({
         },
         ssr: {
             external: ['fsevents'],
+        },   
+        server: {
+            host: true,
+            port: 4321,
+            allowedHosts: ["assucly.fr"] // 👈 Ajoute exactement ceci ici
         },
-        build: {
-            rollupOptions: {
-                external: ['fsevents'],
-            },
-            commonjsOptions: {
-                ignore: ['fsevents'],
-            },
+        preview: {
+            host: true,
+            port: 4321,
+            allowedHosts: ['assucly.fr']
         },
     },
+    optimizeDeps: {
+      include: ['acorn'],
+    },
     buildOptions: {
-        minify: true,
+       minify: true,
     },
 });
