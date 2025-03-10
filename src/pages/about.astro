@@ -1,0 +1,154 @@
+---
+import { Container } from "@components/Container";
+import { ContentSection } from "@blocks/ContentSection";
+import { Image } from "@static/images";
+import Layout from "../layouts/Layout.astro";
+
+const title = "À propos";
+const description = "Découvrez l'ASSUCLY et son engagement pour les usagers du chauffage urbain.";
+---
+
+<Layout title={title} description={description}>
+    <main>
+        <ContentSection>
+            <h1 class="text-4xl font-bold tracking-tight text-secondary sm:text-6xl">
+                {title}
+            </h1>
+            <p class="mt-6 text-lg leading-8 text-secondary opacity-50">
+                {description}
+            </p>
+        </ContentSection>
+
+        <section class="mt-20 mb-20">
+            <Container>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Section 1 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h2 class="text-2xl font-semibold text-secondary mb-4">
+                            Notre Mission
+                        </h2>
+                        <p class="text-secondary opacity-70 mb-4">
+                            Découvrez comment l'ASSUCLY défend les intérêts des usagers du chauffage urbain.
+                        </p>
+                        <a href="#mission" class="text-tertiary hover:text-opacity-80 font-medium">
+                            En savoir plus →
+                        </a>
+                    </div>
+
+                    <!-- Section 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h2 class="text-2xl font-semibold text-secondary mb-4">
+                            Nos Actions
+                        </h2>
+                        <p class="text-secondary opacity-70 mb-4">
+                            Les actions concrètes que nous menons pour améliorer le service.
+                        </p>
+                        <a href="#actions" class="text-tertiary hover:text-opacity-80 font-medium">
+                            En savoir plus →
+                        </a>
+                    </div>
+
+                    <!-- Section 3 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h2 class="text-2xl font-semibold text-secondary mb-4">
+                            Notre Vision
+                        </h2>
+                        <p class="text-secondary opacity-70 mb-4">
+                            Notre vision pour l'avenir du chauffage urbain à Lyon.
+                        </p>
+                        <a href="#vision" class="text-tertiary hover:text-opacity-80 font-medium">
+                            En savoir plus →
+                        </a>
+                    </div>
+                </div>
+            </Container>
+        </section>
+
+        <section class="bg-white py-20">
+            <Container>
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl font-bold text-secondary mb-8">
+                        À propos de l&apos;ASSUCLY
+                    </h2>
+                    
+                    <div class="prose prose-lg text-secondary">
+                        <p class="mb-6">
+                            L&apos;Association des Usagers du Chauffage Urbain du Grand Lyon (ASSUCLY) est une organisation engagée dans la défense des intérêts des usagers du réseau de chauffage urbain de la métropole lyonnaise. Créée pour répondre aux besoins de représentation et garantir une gestion équitable du réseau, l&apos;association est aujourd&apos;hui un acteur incontournable du paysage énergétique local.
+                        </p>
+
+                        <h3 id="mission" class="text-2xl font-semibold text-secondary mt-8 mb-4">
+                            Missions et Engagements
+                        </h3>
+                        <p class="mb-6">
+                            L&apos;ASSUCLY représente les abonnés auprès du Grand Lyon, en tant qu&apos;autorité délégante, et des délégataires responsables de l&apos;exploitation du réseau. Elle participe activement aux réunions de la commission consultative dédiée au chauffage urbain, intervenant sur des sujets clés tels que les tarifs, la qualité de service et le développement des énergies renouvelables.
+                        </p>
+
+                        <h3 class="text-2xl font-semibold text-secondary mt-8 mb-4">
+                            Chiffres Clés et Impact
+                        </h3>
+                        <p class="mb-6">
+                            Avec un réseau de chauffage urbain parmi les plus étendus en France, l&apos;association représente plusieurs milliers d&apos;usagers, unis par un objectif commun : garantir un service fiable, économique et respectueux de l&apos;environnement.
+                        </p>
+
+                        <h3 id="actions" class="text-2xl font-semibold text-secondary mt-8 mb-4">
+                            Réalisations Notables
+                        </h3>
+                        <p class="mb-4">
+                            Au fil des années, l&apos;ASSUCLY a mené des actions significatives, notamment :
+                        </p>
+                        <ul class="list-disc pl-6 mb-6">
+                            <li>La promotion d&apos;une tarification plus équitable pour les usagers.</li>
+                            <li>Des négociations réussies pour intégrer davantage d&apos;énergies renouvelables dans le mix énergétique.</li>
+                            <li>Une amélioration continue de la transparence dans la gestion du réseau.</li>
+                        </ul>
+
+                        <h3 class="text-2xl font-semibold text-secondary mt-8 mb-4">
+                            Un Rôle Pédagogique et Collaboratif
+                        </h3>
+                        <p class="mb-6">
+                            En plus de défendre les usagers, l&apos;ASSUCLY joue un rôle essentiel dans la sensibilisation aux enjeux énergétiques. Elle informe régulièrement les abonnés sur les évolutions du réseau, les travaux en cours, et les moyens de réduire leur consommation énergétique. L&apos;association travaille également en collaboration avec d&apos;autres acteurs locaux, tels que les collectivités et les associations environnementales, pour amplifier son impact.
+                        </p>
+
+                        <h3 class="text-2xl font-semibold text-secondary mt-8 mb-4">
+                            Projets et Perspectives
+                        </h3>
+                        <p class="mb-4">
+                            L&apos;ASSUCLY reste fermement engagée dans la transition énergétique. Parmi ses priorités :
+                        </p>
+                        <ul class="list-disc pl-6 mb-6">
+                            <li>Augmenter significativement la part des énergies renouvelables dans le réseau, afin de réduire son empreinte carbone.</li>
+                            <li>Moderniser les infrastructures pour améliorer l&apos;efficacité énergétique et garantir des coûts compétitifs pour les usagers.</li>
+                            <li>Renforcer les partenariats avec les acteurs locaux pour faire du chauffage urbain un levier de durabilité pour la métropole lyonnaise.</li>
+                        </ul>
+
+                        <h3 id="vision" class="text-2xl font-semibold text-secondary mt-8 mb-4">
+                            Un Acteur pour l&apos;Avenir
+                        </h3>
+                        <p class="mb-6">
+                            En plaçant l&apos;usager au cœur de ses actions, l&apos;ASSUCLY contribue activement à bâtir un système de chauffage urbain durable, transparent et accessible. Son engagement pour une transition énergétique ambitieuse reflète une vision claire : un avenir où l&apos;énergie est à la fois respectueuse de l&apos;environnement et abordable pour tous.
+                        </p>
+                    </div>
+                </div>
+            </Container>
+        </section>
+
+        <section class="bg-tertiary bg-opacity-10 py-20">
+            <Container>
+                <div class="text-center">
+                    <h2 class="text-3xl font-bold text-secondary mb-6">
+                        Besoin d&apos;aide supplémentaire ?
+                    </h2>
+                    <p class="text-secondary opacity-70 mb-8 max-w-2xl mx-auto">
+                        Notre équipe est là pour vous aider. N&apos;hésitez pas à nous contacter si vous avez des questions.
+                    </p>
+                    <a
+                        href="/contact"
+                        class="inline-flex items-center justify-center border border-transparent rounded-sm leading-snug transition duration-150 ease-in-out text-primary hover:text-white bg-tertiary hover:bg-opacity-50 font-medium p-2 px-4 text-sm relative cursor-pointer"
+                    >
+                        Nous contacter
+                    </a>
+                </div>
+            </Container>
+        </section>
+    </main>
+</Layout> 

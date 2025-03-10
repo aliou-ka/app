@@ -1,0 +1,168 @@
+---
+import { Hero } from "@blocks/Hero";
+import Layout from "../layouts/Layout.astro";
+import { Logos } from "@blocks/Logos";
+import { Service } from "@blocks/Service";
+import { Stats } from "@blocks/Stats";
+import { Newsletter } from "@blocks/Newsletter";
+import { Testimonials } from "@blocks/Testimonials";
+import { ImageContent } from "@blocks/ImageContent";
+---
+
+<Layout title="Assucly" description="YOUR META DESCRIPTION FOR SEO">
+    <main class="page-content w-full overflow-x-hidden min-w-full">
+        <div class="w-full max-w-[100vw]">
+            <Hero
+                heroType="contentImage"
+                data={{
+                    label: `Devenir un partenaire `,
+                 
+                    description: `​L'Association des Usagers du Chauffage Urbain du Grand Lyon (ASSUCLY), fondée en 2009, a pour mission de démocratiser les connaissances sur le fonctionnement et les avantages des réseaux de chaleur. Elle s'engage à diffuser ces informations auprès des copropriétés et à accompagner les résidents dans leur appropriation de ces systèmes. Le chauffage urbain est en effet un enjeu stratégique, mais sa complexité nécessite une meilleure compréhension collective.`,
+                    image: "lyon",
+                    button: {
+                        text: "en savoir plus",
+                        link: "/docs",
+                        variant: "primary",
+                    },
+                }}
+            />
+            <!--
+            <Logos
+                data={{
+                    title: "Trusted by the world's best companies",
+                    logos: ["logo1", "logo2", "logo3", "logo4"],
+                }}
+            />
+            -->
+            <Service
+                data={{
+                    aboveTitle: "Nos Services",
+                    title: "Découvrez notre large éventail de services",
+                    description: "",
+                    services: [
+                        {
+                            title: "Représentation active des usagers auprès du Grand Lyon",
+                            description:
+                                "A developper",
+                            icon: "cloud",
+                        },
+                        {
+                            title: "Accompagnement personnalisé pour optimiser votre consommation d'énergie",
+                            description:
+                                "A developper",
+                            icon: "lock",
+                        },
+                        {
+                            title: "Veille réglementaire et technique permanente",
+                            description:
+                                "A developper",
+                            icon: "repeat",
+                        },
+                        {
+                            title: "Actions concrètes pour accélérer l'intégration des énergies renouvelables",
+                            description:
+                                "A developper",
+                            icon: "fingerprint",
+                        },
+                    ],
+                }}
+            />
+
+            <Stats
+                data={{
+                    title: "Mix énergétique du réseau de chaleur de Lyon (2022)",
+                    description:
+                        "La consommation totale de chaleur livrée par le réseau était de 530,80 GWh (gigawattheures) en 2022. En appliquant le pourcentage du gaz naturel à cette consommation totale, la consommation de gaz pour 2022 serait d'environ 173,02 GWh.​ Pour les années 2023 et 2024, les données spécifiques ne sont pas encore disponibles.",
+                    stats: [
+                        {
+                            title: "32,6%",
+                            variant: "blue",
+                            description:
+                                "<b>Gaz naturel</b>",
+                        },
+                        {
+                            title: "50,1%",
+                            variant: "blue",
+                            description:
+                                "<b>Combustion de déchets via les unités de valorisation énergétique (UVE)</b>",
+                        },
+                        {
+                            title: "13,5%",
+                            variant: "blue",
+                            description:
+                                "<b>Biomasse</b>",
+                        },
+                        {
+                            title: "3,6%",
+                            variant: "blue",
+                            description:
+                                "<b>Autre chaleur récupérée</b>",
+                        },
+                    ],
+                }}
+            />
+
+            <ImageContent
+                data={{
+                    aboveTitle: "Actualités",
+                    description:
+                        " La Métropole de Lyon porte dans ses cartons l'immense chantier des réseaux de chaleur urbains. Parmi les projets de la mandature écologiste : l'extension de l'un des sept réseaux existants, mais aussi la création de deux nouveaux, dont l'un prévoit d'alimenter en calories 14.500 équivalents logements supplémentaires. Et ce, avec de l'énergie décarbonée ou récupérée, ce qui constitue encore un défi à la fois technique et économique, pour rompre avec les 34 % de gaz fossile toujours distribués dans la Métropole.",
+                    image: "reseauGaz",
+                    title: "À Lyon, comment les réseaux de chaleur urbains tentent de sortir du gaz fossile (chaleur fatale, ENR...)",
+                    imagePosition: "right",
+                }}
+            />
+
+            <ImageContent
+                data={{
+                    aboveTitle: "Lyon Métropole",
+                    description:
+                        "Le nouveau réseau du sud-ouest métropolitain va couvrir 14 500 équivalents logements, 38 kilomètres de réseau, environ 140 GWh par année de chaleur livrée, 'avec un taux d'énergie renouvelable et de récupération de 100 %', précise la Métropole de Lyon, qui ajoute que cela fait de ce projet 'l'un des plus grands réseaux de chaleur de France'. Le projet de Coriance a été choisi au terme de l'appel d'offre européen parce qu'il propose 'une très bonne intégration architecturale de la future chaufferie', qui sera créée dans la zone de la Mouche à Saint-Genis-Laval. Le groupement Coriance (Noisy-le-Grand, Val-de-Marne) agira au titre du concessionnaire de service public qui construira et exploitera ce réseau.",
+                    image: "reseauChaleur",
+                    title: "Un nouveau réseau de chaleur pour 14 500 logements de la Métropole de Lyon",
+                    imagePosition: "left",
+                }}
+            />
+
+            <Testimonials
+                data={{
+                    aboveTitle: "Témoignage",
+                    title: "Que disent nos adhérents",
+                    description:
+                        "L'Association des Usagers du Chauffage Urbain du Grand Lyon (ASSUCLY) agit quotidiennement en tant que porte-parole engagé des abonnés du réseau de chauffage urbain auprès des autorités compétentes et des délégataires. Grâce à une communication régulière et transparente, elle assure un lien étroit avec ses adhérents, recueillant leurs préoccupations et attentes afin de mieux les représenter. En rejoignant l'ASSUCLY, chaque adhérent bénéficie d'un accompagnement personnalisé, d'une information constante sur les évolutions du réseau, ainsi que d'un soutien actif dans toutes les démarches administratives et techniques. Ensemble, association et adhérents contribuent ainsi à façonner un réseau plus efficace, durable et respectueux de l'environnement.",
+                    authors: [
+                        {
+                            authorName: "Le Baraban",
+                            authorRole: "Adhérent",
+                            content:
+                                "Super !",
+                        },
+                        {
+                            authorName: "Copro 1",
+                            authorRole: "Adhérent",
+                            content:
+                                "L'Assucly nous a aidé dans ... ",
+                        },
+                        {
+                            authorName: "Copro 2",
+                            authorRole: "Adhérent",
+                            content:
+                                "Nous sommes ravis",
+                        },
+                    ],
+                }}
+            />
+
+            <Newsletter
+                data={{
+                    button: {
+                        label: "Rejoindre",
+                        link: "/",
+                    },
+                    title: "Inscrivez-vous à notre newsletter",
+                    label: " pour ne rien manquer de nos actualités !",
+                }}
+            />
+        </div>
+    </main>
+</Layout>
