@@ -72,7 +72,8 @@ ${message}
     // Envoyer l'email avec Resend
     const { data: emailData, error } = await resend.emails.send({
       from: "ASSUCLY <contact@assucly.fr>",
-      to: ["aliou.ka@gmail.com"],
+      to: ["contact@assucly.fr"],
+      bcc: ["epaulard34@gmail.com"],
       subject: `Nouveau message de contact - ${type}`,
       html: emailHtml,
       text: emailText,
